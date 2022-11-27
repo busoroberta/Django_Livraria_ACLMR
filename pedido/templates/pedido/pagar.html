@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Pagamento | {% endblock %}
+
+{% load omfilters %}
+{% load static %}
+
+{% block conteudo %}
+<div class="row">
+    <div class="col">
+        <h3>Escolha o método de pagamento</h3>
+        <form>
+            <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op1"> <b>Cartão de Crédito</b><br>
+            <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op2"> <b>Boleto</b><br>
+            <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op3"> <b>Transferência Bancária</b><br><br>
+            </form>
+    </div>
+</div>
+
+{% include 'parciais/_pedido.html' %}
+
+<div class="row mt-4">
+    <div class="col">
+        <a href="#" class="btn btn-primary btn-block btn-lg">Criar Pedido</a>
+    </div>
+</div>
+
+
+{% endblock %}
